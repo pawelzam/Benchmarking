@@ -13,8 +13,7 @@ public class Exceptions
             new("Third")
         ]);
 
-        //await Task.WhenAll(taskCompletionSource.Task); // it takes only first exception into account and ignores the rest 
-
-        _ = await new[] { taskCompletionSource.Task }.WhenAll(); // Extension method takes aggregated exception so we're not losing the information
+        
+        await new Task[] { taskCompletionSource.Task }.WhenAll(); // Extension method takes aggregated exception so we're not losing the information
     }
 }
