@@ -42,9 +42,9 @@ public class Tasks
         await Parallel.ForEachAsync(_tasks, async (task, _) => await task);
     }
 
-    private static async Task<int> ProcessAsync(int delay)
+    private static async Task<int> ProcessAsync(int number)
     {
-        await Task.Delay(delay * 100);
-        return delay;
+        await Task.Delay(100);
+        return number;
     }
 }
