@@ -23,3 +23,21 @@ Boxing:
 |------- |----------:|----------:|----------:|-----:|-------:|-------:|----------:|
 | Stack  |  77.09 ns |  1.479 ns |  1.235 ns |    1 | 0.0612 |      - |     512 B |
 | Heap   | 576.34 ns | 18.352 ns | 53.532 ns |    2 | 0.3958 | 0.0048 |    3312 B |
+
+Enums:
+
+| Method      | Mean     | Error    | StdDev   | Rank | Gen0   | Allocated |
+|------------ |---------:|---------:|---------:|-----:|-------:|----------:|
+| AndOperator | 260.3 ns |  5.23 ns |  5.14 ns |    1 | 0.0095 |     120 B |
+| Contains    | 740.1 ns | 14.65 ns | 26.78 ns |    2 | 0.0019 |      32 B |
+
+Arrays:
+
+| Method                                                | Mean     | Error     | StdDev    | Median   | Ratio | RatioSD | Rank | Allocated | Alloc Ratio |
+|------------------------------------------------------ |---------:|----------:|----------:|---------:|------:|--------:|-----:|----------:|------------:|
+| SumOddsUsingParallelismAndNoBoundsChecks              | 2.849 ns | 0.0830 ns | 0.0776 ns | 2.826 ns |  0.35 |    0.01 |    1 |         - |          NA |
+| SumOddsUsingParallelismAndNoBoundsChecksMaximizePorts | 3.067 ns | 0.0800 ns | 0.0709 ns | 3.055 ns |  0.38 |    0.01 |    2 |         - |          NA |
+| SumOddsUsingParallelism                               | 4.053 ns | 0.1099 ns | 0.2933 ns | 3.933 ns |  0.50 |    0.04 |    3 |         - |          NA |
+| SumOddsUsingParallelismAndShiftLeftOperator           | 4.270 ns | 0.0893 ns | 0.0836 ns | 4.256 ns |  0.52 |    0.02 |    3 |         - |          NA |
+| SumOddsUsingAndOperator                               | 4.632 ns | 0.1814 ns | 0.5320 ns | 4.467 ns |  0.57 |    0.07 |    3 |         - |          NA |
+| SumOddsUsingMod                                       | 8.151 ns | 0.1950 ns | 0.2603 ns | 8.120 ns |  1.00 |    0.04 |    4 |         - |          NA |
