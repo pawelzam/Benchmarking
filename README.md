@@ -41,3 +41,13 @@ Arrays:
 | SumOddsUsingParallelismAndShiftLeftOperator           | 4.270 ns | 0.0893 ns | 0.0836 ns | 4.256 ns |  0.52 |    0.02 |    3 |         - |          NA |
 | SumOddsUsingAndOperator                               | 4.632 ns | 0.1814 ns | 0.5320 ns | 4.467 ns |  0.57 |    0.07 |    3 |         - |          NA |
 | SumOddsUsingMod                                       | 8.151 ns | 0.1950 ns | 0.2603 ns | 8.120 ns |  1.00 |    0.04 |    4 |         - |          NA |
+
+Types:
+
+| Method         | Mean       | Error    | StdDev    | Rank | Gen0   | Allocated |
+|--------------- |-----------:|---------:|----------:|-----:|-------:|----------:|
+| Struct         |   256.2 ns |  5.13 ns |   9.63 ns |    1 |      - |         - |
+| RecordStruct   |   264.5 ns |  5.31 ns |  13.13 ns |    1 |      - |         - |
+| ImmutableClass | 1,921.4 ns | 44.72 ns | 129.03 ns |    2 | 1.9112 |   24000 B |
+| Record         | 1,951.6 ns | 54.38 ns | 155.16 ns |    2 | 1.9112 |   24000 B |
+| MutableClass   | 2,311.4 ns | 63.97 ns | 184.58 ns |    3 | 1.9112 |   24000 B |
